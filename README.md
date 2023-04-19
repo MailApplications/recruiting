@@ -9,7 +9,6 @@ Unfortunately, since this morning, the service is not working anymore. We would 
 
 # Architecture
 This service consists of a PHP application, connected to a PostgreSQL DB, a monitoring system, a Load Balancer and a spare server:
-![Architecture](https://user-images.githubusercontent.com/118717569/202998467-6ef0dbb6-98ec-4a2a-903d-22d118ca01b4.jpg)
 
 * poma-web.thinkfreak.de → Server where the application is deployed
 * poma-db.thinkfreak.de → Server where the DB is deployed
@@ -17,6 +16,8 @@ This service consists of a PHP application, connected to a PostgreSQL DB, a moni
 * poma-lb.thinkfreak.de → Server where the Load Balancer is configured
 * poma-backend.thinkfreak.de → spare server, which should be monitored, but isn't serving any customer services at the moment
  
+![Architecture](https://mam-confluence.1and1.com/rest/gliffy/1.0/embeddedDiagrams/12129126-0eb9-4980-b531-c27a98b16f81.png)
+
 # Instructions
 * Using the internet (Google, Stackoverflow, etc) is allowed.
 * Read the tasks carefully
