@@ -16,7 +16,7 @@ This service consists of a PHP application, connected to a PostgreSQL DB, a moni
 * poma-lb.thinkfreak.de → Server where the Load Balancer is configured
 * poma-backend.thinkfreak.de → spare server, which should be monitored, but isn't serving any customer services at the moment
  
-![Architecture](https://mam-confluence.1and1.com/rest/gliffy/1.0/embeddedDiagrams/12129126-0eb9-4980-b531-c27a98b16f81.png)
+![Architecture](/images/architecture.png)
 
 # Instructions
 * Using the internet (Google, Stackoverflow, etc) is allowed.
