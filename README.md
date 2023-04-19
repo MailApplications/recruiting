@@ -19,9 +19,9 @@ This service consists of a PHP application, connected to a PostgreSQL DB, a moni
 ![Architecture](/images/architecture.png)
 
 # Instructions
-* Using the internet (Google, Stackoverflow, etc) is allowed.
-* Read the tasks carefully
-* Assume that you are working on a Live system, impacting thousands of clients
+* Using the internet (Google, Stackoverflow, etc) is **allowed**.
+* Read the tasks carefully!
+* Assume that you are working on a **Live** system, impacting ***thousands of clients***
 * Ask as many questions as you want
 * If you feel stuck, ask for some tips
 * You are being evaluated as HOW you tackle problems in real life. Solving all the problems is not a requirement of this test.
