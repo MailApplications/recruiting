@@ -20,32 +20,32 @@ This service consists of a PHP application, connected to a PostgreSQL DB, a moni
 
 # Instructions
 * Using the internet (Google, Stackoverflow, etc) is **allowed**.
-* Read the tasks carefully!
+* Read the tasks carefully
 * Assume that you are working on a **Live** system, impacting ***thousands of clients***
 * Ask as many questions as you want
 * If you feel stuck, ask for some tips
 * You are being evaluated as HOW you tackle problems in real life. Solving all the problems is not a requirement of this test.
 * Please share your desktop, where you search the internet
 * You will use tmate to connect to the service hosts. This way, we can connect to the same terminal and follow your progress.
-* DNS configuration looks like that: *.thinkfreak.de and thinkfreak.de are pointing to the external IP addresses of poma-lb
+* DNS configuration looks like that: *.thinkfreak.de and thinkfreak.de are pointing to the external IP addresses of **poma-lb**
 * There is a network firewall installed protecting the external interfaces of the hosts and only allowing TCP ports (80, 443, 22)
-* Files / credentials / certificates needed to be able to fulfill tasks, you can find on all machines in the folder /root/pomatest 
+* Files / credentials / certificates needed to be able to fulfill tasks can be found on all machines, in the folder `/root/pomatest` 
 
 # Hosts and their Credentials
 
 Provided during the interview
 
 # Tasks
-In order to make this service available to more users, some improvements need to be done:
+In order to make this service available to more users, some improvements are required:
 
 * Yesterday we could reach the web-service on http://poma-web.thinkfreak.de ... today we can't reach it anymore
   * Please fix it
-* A new host was created to act as a Load Balancer: poma-lb
+* A new host was created to act as a Load Balancer: **poma-lb**
   * Install Nginx/Traefix to act as a reverse proxy with SSL offloading
-  * Proxy web app from poma-web on the internal interface to www.thinkfreak.de / thinkfreak.de with TLS. HTTP calls should be automatically forwarded from http to https.
+  * Proxy web app from poma-web on the internal interface to www.thinkfreak.de / thinkfreak.de with TLS. Make sure users are automatically forwarded from http to https.
   * Bonus:
     * Check your domains with SSLlabs. How can you improve the SSLlabs results?
-    * Proxy Grafana from poma-mon on the internal interface with TLS to grafana.thinkfreak.de
+    * Proxy Grafana from **poma-mon** on the internal interface with TLS to grafana.thinkfreak.de
 * There was a decision to use a separated monitoring system for this service. A host (poma-mon) was created with Icinga2, prometheus and Grafana.
   * Please create a new dashboard to monitor CPU / LOAD / MEMORY on the 4 hosts (poma-web, poma-mon, poma-db and poma-lb)
   * Bonus:
@@ -60,8 +60,7 @@ But, before you start, there was an incident this morning. A System Administrato
 Please check if all components are up and running as expected.
 
 
-
-So it is expected to have a running service, following the proposed architecture, with a working dashboard in Grafana.
+**So it is expected to have a running service, following the proposed architecture, with a working dashboard in Grafana.***
 
 # Tips
 * Check your connection to all 4 hosts
@@ -71,5 +70,5 @@ So it is expected to have a running service, following the proposed architecture
   * Which network interfaces / addresses / hostnames are used?
   * Which systems are reachable by which connections/interfaces.
   * How are systems secured?
-* To debug problems on the web-app on poma-web enable the debug option ```'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN``` 
+* To debug problems on the web-app on **poma-web** enable the debug option ```'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN``` 
   in file ```/var/www/blog/config/app_local.php``` and check the startpage of the web app.
